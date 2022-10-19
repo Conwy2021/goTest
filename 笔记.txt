@@ -1,0 +1,62 @@
+go mod 命令
+
+go mod tidy
+这种命令无法下载时 需要手动下载
+go get ...
+
+go mod 配置 go mod走代理
+
+导入包后 执行 go mod tidy
+会去拉取依赖包
+很多第三方包 都是放到github 上的
+可以自己写包 放到github上 这样就可以引用了
+版本控制 要自己给包打标签 自己来管理  git上的标签就是版本
+ windows 安装gcc 后 idea 不识别 需要重启电脑
+
+
+go mod 下载的包 放再gopath目录里了
+
+两个main包 一个文件引用另一个文件使用
+go run  1文件.go 2文件.go
+
+idea 配置 go-mod
+
+先配置gopath 到自己的项目下
+再配置go modules  勾选enable
+go mod vendor 当vendor 有依赖包 但是项目爆红无法找到时
+
+go 语法
+make
+golang 分配内存主要有内置函数new和make，今天我们来探究一下make有哪些玩法。
+
+make只能为slice, map, channel分配内存，并返回一个初始化的值。首先来看下make有以下三种不同的用法：
+
+1. make(map[string]string)
+2. make([]int, 2)
+3. make([]int, 2, 4)
+
+&MyStruct{3, 4}  等于 new 结构体  等于初始化结构体
+
+admin.peers参数说明
+network.inboud: true
+
+true 是站内连接 false 是站外连接
+
+861731d5 当传入的string 为空是 会返回这个签名
+geth3.exe attach http://192.168.2.16:30310  可以进入他人节点的控制台
+
+编译geth 时 在cmd 控制台编译  此报错不影响打包 大致原因是go版本的问题 可忽略
+duk_minimal_printf.c: In function 'duk__parse_pointer':
+duk_minimal_printf.c:126:9: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  *out = (void *) val;
+         ^
+duk_minimal_printf.c: In function 'duk_minimal_vsnprintf':
+duk_minimal_printf.c:236:76: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     off = duk__format_long(str, size, off, sizeof(void *) * 2, '0', 16, 0, (unsigned long) v);
+
+
+语法树 理解 书写的代码 到字节码的转换的中间产物  根据设计将代币转为中间格式 方便后期快速转换为字节码
+通过一种语言实际了解下实现 就可以了 大致就是会设计好如何分解代码 更好为下一步处理
+
+Ctrl+S 暂停屏幕输出
+Ctrl+Q 继续屏幕输出
