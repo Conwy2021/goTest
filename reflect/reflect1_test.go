@@ -52,7 +52,7 @@ func Test102545(t *testing.T) { //通过反射修改数值
 
 }
 
-func Test102555(t *testing.T) {
+func Test102555(t *testing.T) { //在Go 语言中，函数是第一类对象
 	hl := hello
 	fv := reflect.ValueOf(hl) //反射的是函数
 	fv.Call(nil)

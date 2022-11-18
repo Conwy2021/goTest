@@ -64,3 +64,20 @@ func Test10210935(t *testing.T) {
 	time.Sleep(5 * time.Second)
 
 }
+
+/*
+Go语言中无缓冲的通道（unbuffered channel）是指在接收前没有能力保存任何值的通道。
+这种类型的通道要求发送 goroutine 和接收 goroutine 同时准备好，才能完成发送和接收操作。
+*/
+func Test202210280930(t *testing.T) {
+	ch := make(chan int)
+	go func() {
+		ch <- 1
+	}()
+
+	//ch <- 3 //会报错，因为缓冲区只允许大小为2
+	x1 := <-ch
+
+	fmt.Println(x1)
+
+}

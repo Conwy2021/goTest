@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/big"
 	"testing"
 )
 
@@ -16,5 +17,14 @@ func Test1034(t *testing.T) {
 	fmt.Println(s3)
 	s4 := s[:2]
 	fmt.Println(s4)
+
+}
+
+func Test202211181804(t *testing.T) {
+	a := big.NewInt(1)
+	b := big.NewInt(2)
+
+	c1 := a.Cmp(b)
+	fmt.Println(c1)
 
 }

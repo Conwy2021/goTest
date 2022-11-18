@@ -41,3 +41,9 @@ func TestName(t *testing.T) {
     `)
 
 }
+
+func Test202210261442(t *testing.T) {
+	fmt.Println("asdad", 111)
+	a := "aadd"
+	fmt.Println("asd", a)
+}
